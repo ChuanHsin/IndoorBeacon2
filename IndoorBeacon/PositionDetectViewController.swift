@@ -18,6 +18,8 @@ class PositionDetectViewController: UIViewController, ESTBeaconManagerDelegate {
     @IBOutlet weak var SecondImageView: UIImageView!
     @IBOutlet weak var ThirdImageView: UIImageView!
     
+    @IBOutlet weak var Principle: UIImageView!
+    
     let beaconManager = ESTBeaconManager()
     let beaconRegion = CLBeaconRegion(proximityUUID: UUID(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "estimote")
     
@@ -37,8 +39,13 @@ class PositionDetectViewController: UIViewController, ESTBeaconManagerDelegate {
             
             FirstImageView.image = #imageLiteral(resourceName: "Apple")
             SecondImageView.image =  #imageLiteral(resourceName: "Apple")
-            BeaconFirstLabel.text = "Beacon-1st : "
-            BeaconSecondLabel.text = "Beacon-2nd : "
+            ThirdImageView.image = #imageLiteral(resourceName: "Apple")
+            Principle.image = #imageLiteral(resourceName: "A∩B∩C-Original")
+            
+            BeaconFirstLabel.text = "1st.Beacon : "
+            BeaconSecondLabel.text = "2nd.Beacon : "
+            BeaconThirdLabel.text = "3rd.Beacon : "
+            
             
         }else if (sortedBeacons.count == 1){ //detect one beacon
             
@@ -47,19 +54,38 @@ class PositionDetectViewController: UIViewController, ESTBeaconManagerDelegate {
             if (FirstBeacon.major == 58791){
                 
                 print(FirstBeacon.major)
-                BeaconFirstLabel.text = "Beacon-1st : \(FirstBeacon.major)"
-                BeaconSecondLabel.text = "Beacon-2nd : "
+                BeaconFirstLabel.text = "1st.Beacon : \(FirstBeacon.major)"
+                BeaconSecondLabel.text = "2nd.Beacon : "
+                BeaconThirdLabel.text = "3rd.Beacon : "
                 
                 FirstImageView.image = #imageLiteral(resourceName: "lemonYellow")
                 SecondImageView.image = #imageLiteral(resourceName: "Apple")
+                ThirdImageView.image = #imageLiteral(resourceName: "Apple")
+                Principle.image = #imageLiteral(resourceName: "A")
                 
             }else if (FirstBeacon.major == 44057){
+                
                 print(FirstBeacon.major)
-                BeaconFirstLabel.text = "Beacon-1st : \(FirstBeacon.major)"
-                BeaconSecondLabel.text = "Beacon-2nd : "
+                BeaconFirstLabel.text = "1st.Beacon : \(FirstBeacon.major)"
+                BeaconSecondLabel.text = "2nd.Beacon : "
+                BeaconThirdLabel.text = "3rd.Beacon : "
                 
                 FirstImageView.image = #imageLiteral(resourceName: "beetrootRed")
                 SecondImageView.image = #imageLiteral(resourceName: "Apple")
+                ThirdImageView.image = #imageLiteral(resourceName: "Apple")
+                Principle.image = #imageLiteral(resourceName: "B")
+                
+            }else if (FirstBeacon.major == 55880){
+                
+                print(FirstBeacon.major)
+                BeaconFirstLabel.text = "1st.Beacon : \(FirstBeacon.major)"
+                BeaconSecondLabel.text = "2nd.Beacon : "
+                BeaconThirdLabel.text = "3rd.Beacon : "
+                
+                FirstImageView.image = #imageLiteral(resourceName: "candylarge")
+                SecondImageView.image = #imageLiteral(resourceName: "Apple")
+                ThirdImageView.image = #imageLiteral(resourceName: "Apple")
+                Principle.image = #imageLiteral(resourceName: "C")
             }
 
         }else if(sortedBeacons.count == 2){ //detect two beacon
@@ -70,30 +96,49 @@ class PositionDetectViewController: UIViewController, ESTBeaconManagerDelegate {
             print(FirstBeacon.major)
             print(SecondBeacon.major)
             //print(ThirdBeacon.major)
-            BeaconFirstLabel.text = "Beacon-1st : \(FirstBeacon.major)"
-            BeaconSecondLabel.text = "Beacon-2nd : \(SecondBeacon.major)"
-            //BeaconThirdLabel.text = "Beacon-3rd : \(ThirdBeacon.major)"
+            BeaconFirstLabel.text = "1st.Beacon : \(FirstBeacon.major)"
+            BeaconSecondLabel.text = "2nd.Beacon : \(SecondBeacon.major)"
+            //BeaconThirdLabel.text = "3rd.Beacon : \(ThirdBeacon.major)"
             
-            if (FirstBeacon.major == 58791){
-                FirstImageView.image = #imageLiteral(resourceName: "lemonYellow")
-                if (SecondBeacon.major == 44057){
-                    SecondImageView.image = #imageLiteral(resourceName: "beetrootRed")
-                }
-            }else if (FirstBeacon.major == 44057){
-                FirstImageView.image = #imageLiteral(resourceName: "beetrootRed")
-                if (SecondBeacon.major == 58791) {
-                    SecondImageView.image = #imageLiteral(resourceName: "lemonYellow")
-                }
-            }else if (FirstBeacon.major == 58791 && SecondBeacon.major == 44057)||(FirstBeacon.major == 44057 &&            SecondBeacon.major == 58791){
+            //顯示距離遠到近的iBeacon
+            if (FirstBeacon.major == 58791 && SecondBeacon.major == 44057)||(FirstBeacon.major == 44057 && SecondBeacon.major == 58791){ //判斷為兩顆iBeacon
                 FirstImageView.image = #imageLiteral(resourceName: "lemonYellow")
                 SecondImageView.image = #imageLiteral(resourceName: "beetrootRed")
-            }else{
-                FirstImageView.image = #imageLiteral(resourceName: "Apple")
-                SecondImageView.image =  #imageLiteral(resourceName: "Apple")
+                ThirdImageView.image = #imageLiteral(resourceName: "Apple")
+                Principle.image = #imageLiteral(resourceName: "A∩B")
+                
+            }else if (FirstBeacon.major == 58791 && SecondBeacon.major == 55880)||(FirstBeacon.major == 55880 && SecondBeacon.major == 58791){
+                FirstImageView.image = #imageLiteral(resourceName: "lemonYellow")
+                SecondImageView.image = #imageLiteral(resourceName: "candylarge")
+                ThirdImageView.image = #imageLiteral(resourceName: "Apple")
+                Principle.image = #imageLiteral(resourceName: "A∩C")
+                
+            }else if (FirstBeacon.major == 44057 && SecondBeacon.major == 55880)||(FirstBeacon.major == 55880 && SecondBeacon.major == 44057){
+                FirstImageView.image = #imageLiteral(resourceName: "beetrootRed")
+                SecondImageView.image = #imageLiteral(resourceName: "candylarge")
+                ThirdImageView.image = #imageLiteral(resourceName: "Apple")
+                Principle.image = #imageLiteral(resourceName: "B∩C")
             }
             
+        }else if(sortedBeacons.count == 3){ //detect two beacon
+            
+            let FirstBeacon = sortedBeacons[0] as CLBeacon
+            let SecondBeacon = sortedBeacons[1] as CLBeacon
+            let ThirdBeacon = sortedBeacons[2] as CLBeacon
+            print(FirstBeacon.major)
+            print(SecondBeacon.major)
+            print(ThirdBeacon.major)
+            BeaconFirstLabel.text = "1st.Beacon : \(FirstBeacon.major)"
+            BeaconSecondLabel.text = "2nd.Beacon : \(SecondBeacon.major)"
+            BeaconThirdLabel.text = "3rd.Beacon : \(ThirdBeacon.major)"
+            
+            if (FirstBeacon.major == 58791 && SecondBeacon.major == 44057 && ThirdBeacon.major == 55880)||(FirstBeacon.major == 58791 && SecondBeacon.major == 55880 && ThirdBeacon.major == 44057)||(FirstBeacon.major == 44057 && SecondBeacon.major == 58791 && ThirdBeacon.major == 55880)||(FirstBeacon.major == 44057 && SecondBeacon.major == 55880 && ThirdBeacon.major == 58791)||(FirstBeacon.major == 55880 && SecondBeacon.major == 58791 && ThirdBeacon.major == 44057)||(FirstBeacon.major == 55880 && SecondBeacon.major == 44057 && ThirdBeacon.major == 58791){ //判斷為三顆iBeacon
+                FirstImageView.image = #imageLiteral(resourceName: "lemonYellow")
+                SecondImageView.image = #imageLiteral(resourceName: "beetrootRed")
+                ThirdImageView.image = #imageLiteral(resourceName: "candylarge")
+                Principle.image = #imageLiteral(resourceName: "A∩B∩C")
+            }
         }
-        
     }
     
     override func viewDidLoad() {

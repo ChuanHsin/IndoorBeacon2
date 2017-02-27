@@ -310,7 +310,7 @@
                                 <rect key="frame" x="262" y="180" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="A∩B∩C" translatesAutoresizingMaskIntoConstraints="NO" id="fzT-Tw-Jng">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="A∩B∩C-Original" translatesAutoresizingMaskIntoConstraints="NO" id="fzT-Tw-Jng">
                                 <rect key="frame" x="62" y="305" width="250" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -323,6 +323,7 @@
                         <outlet property="BeaconSecondLabel" destination="YOz-Sn-RCq" id="U2v-9T-96H"/>
                         <outlet property="BeaconThirdLabel" destination="QiB-yD-iCG" id="6em-s5-WJ1"/>
                         <outlet property="FirstImageView" destination="0lu-DO-wbd" id="Om3-Bh-fxK"/>
+                        <outlet property="Principle" destination="fzT-Tw-Jng" id="rnC-sE-CTN"/>
                         <outlet property="SecondImageView" destination="Yi8-Lc-L3p" id="aY3-7v-HDI"/>
                         <outlet property="ThirdImageView" destination="hmD-Ed-d1q" id="UDU-Ey-ht3"/>
                     </connections>
@@ -450,7 +451,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="A∩B∩C" width="532" height="483"/>
+        <image name="A∩B∩C-Original" width="532" height="483"/>
         <image name="account_icon" width="24" height="24"/>
         <image name="list_icon" width="24" height="24"/>
     </resources>

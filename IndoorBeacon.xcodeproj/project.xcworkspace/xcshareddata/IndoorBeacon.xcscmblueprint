@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "49D3F9C5E2D711ACAE86EABC148A7EF0B251977C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "571A904513E223108F97163EF453DA8BBD7990D9" : 9223372036854775807,
+    "49D3F9C5E2D711ACAE86EABC148A7EF0B251977C" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A541C7CC-A29B-4511-9693-E87F047A80DD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "571A904513E223108F97163EF453DA8BBD7990D9" : "IndoorBeacon\/IndoorBeacon\/",
+    "49D3F9C5E2D711ACAE86EABC148A7EF0B251977C" : "IndoorBeacon\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "IndoorBeacon",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "IndoorBeacon.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ChuanHsin\/IndoorBeacon2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "49D3F9C5E2D711ACAE86EABC148A7EF0B251977C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ChuanHsin\/iBeaconForIndoorPosition.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "571A904513E223108F97163EF453DA8BBD7990D9"
+    }
+  ]
+}
