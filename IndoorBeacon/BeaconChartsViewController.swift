@@ -17,6 +17,11 @@ class BeaconChartsViewController: UIViewController, ESTBeaconManagerDelegate {
     
     var sortedBeacons : [CLBeacon] = []
     var count : Double = 0
+    var SumRSSI = 0
+    var months: [String] = []
+    var Rssivalue:  [Double] = []
+    var RSSIVALUE: Double = 0
+    var SumDist: Double = 0
     
     let beaconManager = ESTBeaconManager()
     let beaconRegion = CLBeaconRegion(proximityUUID: UUID(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "estimote")
@@ -38,16 +43,26 @@ class BeaconChartsViewController: UIViewController, ESTBeaconManagerDelegate {
                 DistLabel.text  = "Dist : \(Distance) m"
                 
                 count = count + 1
-                let months = count.description
+                months += ["\(count.description)"]
+                //SumRSSI = SumRSSI + (nearest.rssi)
+                //let AverageRSSI = (Float(SumRSSI)/Float(count))
                 
-                let unitsSold = nearest.rssi
+                print(months)
+                //Int to Double 轉換
+                SumDist = Double(nearest.rssi) + 0.0
                 
-                /*
+                Rssivalue += [SumDist]
+                
+                print(Rssivalue)
+                //加入限定線
+                //let ll = ChartLimitLine(limit: Double(AverageRSSI), label: "Target")
+                //lineChartView.rightAxis.addLimitLine(ll)
+                
                 //使座標軸好看些＆把Ｘ軸名稱值加上去
-                lineChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values:[months] )
+                lineChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values:months )
                 
-                setChart(dataPoints: [months], values:[Double(unitsSold)])
-                    */
+                setChart(dataPoints: months, values: Rssivalue )
+                
             }
         }
     }
@@ -79,12 +94,8 @@ class BeaconChartsViewController: UIViewController, ESTBeaconManagerDelegate {
         // Do any additional setup after loading the view.
         self.beaconManager.requestAlwaysAuthorization()
         
+        //setChart(dataPoints: months, values: Rssivalue[]  )
         
-        
-        //使座標軸好看些＆把Ｘ軸名稱值加上去
-        lineChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values:[months] )
-        
-        setChart(dataPoints: [months], values:[Double(unitsSold)])
     }
     
     override func didReceiveMemoryWarning() {
