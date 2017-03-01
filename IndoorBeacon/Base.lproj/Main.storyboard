@@ -100,7 +100,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vnu-EN-b4w" id="iDM-4c-s14">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Major" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryo-76-uUU">
@@ -317,7 +317,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.792156862745098" green="0.94509803921568625" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Position Detect" id="fna-Zs-LRH"/>
+                    <navigationItem key="navigationItem" title="Position Detect" id="fna-Zs-LRH">
+                        <barButtonItem key="rightBarButtonItem" title="View2" id="nO0-1h-5a9">
+                            <connections>
+                                <segue destination="8t7-w1-ZR2" kind="show" id="Amp-ly-7xW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="BeaconFirstLabel" destination="xEA-PH-6sa" id="8oV-AH-t53"/>
                         <outlet property="BeaconSecondLabel" destination="YOz-Sn-RCq" id="U2v-9T-96H"/>
@@ -330,7 +336,70 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SoV-Tg-9sx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3128.8000000000002" y="1360.569715142429"/>
+            <point key="canvasLocation" x="3058" y="1361"/>
+        </scene>
+        <!--Beacon Charts View Controller-->
+        <scene sceneID="5CI-Q0-Kul">
+            <objects>
+                <viewController id="vo8-gw-ljs" customClass="BeaconChartsViewController" customModule="IndoorBeacon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="256-BR-IyQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="q9v-lb-fzG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S2Q-lI-3uD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RSSI :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvC-Qh-SPR">
+                                <rect key="frame" x="16" y="70" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dist :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EB0-sJ-8EL">
+                                <rect key="frame" x="16" y="100" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="LineChartView" translatesAutoresizingMaskIntoConstraints="NO" id="g3d-zX-NgF" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="130" width="375" height="488"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.792156862745098" green="0.94509803921568625" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="o05-1x-Ibe"/>
+                    <connections>
+                        <outlet property="DistLabel" destination="EB0-sJ-8EL" id="1Nw-OP-j3z"/>
+                        <outlet property="RSSILabel" destination="FvC-Qh-SPR" id="Whq-ov-Rik"/>
+                        <outlet property="lineChartView" destination="g3d-zX-NgF" id="oq0-we-nKP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6RB-pv-xeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3848.8000000000002" y="1360.569715142429"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IjC-eX-EZb">
+            <objects>
+                <viewController id="8t7-w1-ZR2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pns-Ir-b2R"/>
+                        <viewControllerLayoutGuide type="bottom" id="s2r-pD-HzJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Y1V-P5-8DH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.792156862745098" green="0.94509803921568625" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AVZ-r9-XG3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3057" y="2141"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="nTg-KM-40t">
@@ -348,6 +417,7 @@
                         <segue destination="Yfi-fD-KKK" kind="relationship" relationship="viewControllers" id="zBU-rF-cVT"/>
                         <segue destination="6pv-BP-w0X" kind="relationship" relationship="viewControllers" id="Xzx-nV-ZU1"/>
                         <segue destination="eRL-u2-txe" kind="relationship" relationship="viewControllers" id="1PU-VX-nHb"/>
+                        <segue destination="hTO-lD-l6O" kind="relationship" relationship="viewControllers" id="ZQX-Jg-hIH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jUi-oT-c6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -447,7 +517,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9et-8b-HNm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3129" y="629"/>
+            <point key="canvasLocation" x="3058" y="627"/>
+        </scene>
+        <!--Charts-->
+        <scene sceneID="ioz-6Q-GNr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hTO-lD-l6O" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Charts" image="list_icon" id="CIw-dd-XpV"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Q37-us-ECs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vo8-gw-ljs" kind="relationship" relationship="rootViewController" id="T9E-g1-Lbs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aaI-rh-OLL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3849" y="629"/>
         </scene>
     </scenes>
     <resources>

@@ -120,7 +120,7 @@ class PositionDetectViewController: UIViewController, ESTBeaconManagerDelegate {
                 Principle.image = #imageLiteral(resourceName: "B∩C")
             }
             
-        }else if(sortedBeacons.count == 3){ //detect two beacon
+        }else if(sortedBeacons.count == 3){ //detect three beacon in same region
             
             let FirstBeacon = sortedBeacons[0] as CLBeacon
             let SecondBeacon = sortedBeacons[1] as CLBeacon

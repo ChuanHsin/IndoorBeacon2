@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C04CA2E1E66AA1400F5E8BF /* BeaconChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C04CA2D1E66AA1400F5E8BF /* BeaconChartsViewController.swift */; };
 		1C067A551E5E8CFA00AFA660 /* PositionDetectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C067A541E5E8CFA00AFA660 /* PositionDetectViewController.swift */; };
 		1C326F441E2CA5FB00DD162F /* BeaconListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C326F431E2CA5FB00DD162F /* BeaconListViewController.swift */; };
 		1C326F461E2CADE200DD162F /* BeaconListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C326F451E2CADE200DD162F /* BeaconListCell.swift */; };
@@ -19,9 +20,57 @@
 		1C441BBC1E1DF07700C1FBED /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C441BBB1E1DF07700C1FBED /* EstimoteSDK.framework */; };
 		1C44381C1E4D5AD9001BDE21 /* BeaconStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C44381B1E4D5AD9001BDE21 /* BeaconStatisticsViewController.swift */; };
 		1C63D94C1E5C6F2500BEB438 /* BeaconMutiDetectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C63D94B1E5C6F2500BEB438 /* BeaconMutiDetectorViewController.swift */; };
+		1C9755521E66C0C50079081F /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C97554D1E66C0610079081F /* Charts.framework */; };
+		1C9755531E66C0C50079081F /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C97554D1E66C0610079081F /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1C97554C1E66C0610079081F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1C9755461E66C0610079081F /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F241D8110E600722320;
+			remoteInfo = Charts;
+		};
+		1C97554E1E66C0610079081F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1C9755461E66C0610079081F /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06B120D51D811E6200D14B02;
+			remoteInfo = ChartsRealm;
+		};
+		1C9755501E66C0610079081F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1C9755461E66C0610079081F /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F2E1D8110E600722320;
+			remoteInfo = ChartsTests;
+		};
+		1C9755541E66C0C50079081F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1C9755461E66C0610079081F /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 06165F231D8110E600722320;
+			remoteInfo = Charts;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1CF745631E66BA590034BF8A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1C9755531E66C0C50079081F /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1C04CA2D1E66AA1400F5E8BF /* BeaconChartsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconChartsViewController.swift; sourceTree = "<group>"; };
 		1C067A541E5E8CFA00AFA660 /* PositionDetectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionDetectViewController.swift; sourceTree = "<group>"; };
 		1C326F431E2CA5FB00DD162F /* BeaconListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconListViewController.swift; sourceTree = "<group>"; };
 		1C326F451E2CADE200DD162F /* BeaconListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconListCell.swift; sourceTree = "<group>"; };
@@ -37,6 +86,7 @@
 		1C441BBB1E1DF07700C1FBED /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
 		1C44381B1E4D5AD9001BDE21 /* BeaconStatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconStatisticsViewController.swift; sourceTree = "<group>"; };
 		1C63D94B1E5C6F2500BEB438 /* BeaconMutiDetectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconMutiDetectorViewController.swift; sourceTree = "<group>"; };
+		1C9755461E66C0610079081F /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C9755521E66C0C50079081F /* Charts.framework in Frameworks */,
 				1C441BBA1E1DEF7500C1FBED /* EstimoteSDK.framework in Frameworks */,
 				1C441BBC1E1DF07700C1FBED /* EstimoteSDK.framework in Frameworks */,
 			);
@@ -55,6 +106,7 @@
 		1C441B8D1E1DD8CF00C1FBED = {
 			isa = PBXGroup;
 			children = (
+				1C9755461E66C0610079081F /* Charts.xcodeproj */,
 				1C441BBB1E1DF07700C1FBED /* EstimoteSDK.framework */,
 				1C441B981E1DD8CF00C1FBED /* IndoorBeacon */,
 				1C441B971E1DD8CF00C1FBED /* Products */,
@@ -78,6 +130,7 @@
 				1C44381B1E4D5AD9001BDE21 /* BeaconStatisticsViewController.swift */,
 				1C63D94B1E5C6F2500BEB438 /* BeaconMutiDetectorViewController.swift */,
 				1C067A541E5E8CFA00AFA660 /* PositionDetectViewController.swift */,
+				1C04CA2D1E66AA1400F5E8BF /* BeaconChartsViewController.swift */,
 				1C441B9D1E1DD8CF00C1FBED /* Main.storyboard */,
 				1C441BA01E1DD8CF00C1FBED /* Assets.xcassets */,
 				1C441BA21E1DD8CF00C1FBED /* LaunchScreen.storyboard */,
@@ -97,6 +150,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1C9755471E66C0610079081F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1C97554D1E66C0610079081F /* Charts.framework */,
+				1C97554F1E66C0610079081F /* ChartsRealm.framework */,
+				1C9755511E66C0610079081F /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,10 +170,12 @@
 				1C441B921E1DD8CF00C1FBED /* Sources */,
 				1C441B931E1DD8CF00C1FBED /* Frameworks */,
 				1C441B941E1DD8CF00C1FBED /* Resources */,
+				1CF745631E66BA590034BF8A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1C9755551E66C0C50079081F /* PBXTargetDependency */,
 			);
 			name = IndoorBeacon;
 			productName = IndoorBeacon;
@@ -145,12 +210,42 @@
 			mainGroup = 1C441B8D1E1DD8CF00C1FBED;
 			productRefGroup = 1C441B971E1DD8CF00C1FBED /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1C9755471E66C0610079081F /* Products */;
+					ProjectRef = 1C9755461E66C0610079081F /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1C441B951E1DD8CF00C1FBED /* IndoorBeacon */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1C97554D1E66C0610079081F /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 1C97554C1E66C0610079081F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1C97554F1E66C0610079081F /* ChartsRealm.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ChartsRealm.framework;
+			remoteRef = 1C97554E1E66C0610079081F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1C9755511E66C0610079081F /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 1C9755501E66C0610079081F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1C441B941E1DD8CF00C1FBED /* Resources */ = {
@@ -176,11 +271,20 @@
 				1C326F441E2CA5FB00DD162F /* BeaconListViewController.swift in Sources */,
 				1C067A551E5E8CFA00AFA660 /* PositionDetectViewController.swift in Sources */,
 				1C44381C1E4D5AD9001BDE21 /* BeaconStatisticsViewController.swift in Sources */,
+				1C04CA2E1E66AA1400F5E8BF /* BeaconChartsViewController.swift in Sources */,
 				1C326F461E2CADE200DD162F /* BeaconListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1C9755551E66C0C50079081F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = 1C9755541E66C0C50079081F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1C441B9D1E1DD8CF00C1FBED /* Main.storyboard */ = {
@@ -298,6 +402,7 @@
 		1C441BA91E1DD8CF00C1FBED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 29ANL4BYNG;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -317,6 +422,7 @@
 		1C441BAA1E1DD8CF00C1FBED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 29ANL4BYNG;
 				FRAMEWORK_SEARCH_PATHS = (
