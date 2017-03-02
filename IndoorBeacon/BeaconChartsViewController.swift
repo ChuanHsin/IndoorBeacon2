@@ -15,6 +15,11 @@ class BeaconChartsViewController: UIViewController, ESTBeaconManagerDelegate {
     @IBOutlet weak var DistLabel: UILabel!
     @IBOutlet weak var lineChartView: LineChartView!
     
+    @IBAction func SaveChart(_ sender: UIBarButtonItem) {
+        //LineChartView即時圖片存到手機相簿
+        UIImageWriteToSavedPhotosAlbum((lineChartView.getChartImage(transparent: false))! , nil, nil, nil)
+    }
+    
     var sortedBeacons : [CLBeacon] = []
     var count : Double = 0
     var SumRSSI = 0
@@ -49,10 +54,10 @@ class BeaconChartsViewController: UIViewController, ESTBeaconManagerDelegate {
                 
                 print(months)
                 //Int to Double 轉換
+                //超級難Int to Double靠這行轉換
                 SumDist = Double(nearest.rssi) + 0.0
-                
+                //把當前測得的RSSI值存到Array裡面e.x. Array[]=[0,1,2,3,...]
                 Rssivalue += [SumDist]
-                
                 print(Rssivalue)
                 //加入限定線
                 //let ll = ChartLimitLine(limit: Double(AverageRSSI), label: "Target")
@@ -77,7 +82,7 @@ class BeaconChartsViewController: UIViewController, ESTBeaconManagerDelegate {
             dataEntries.append(dataEntry)
         }
         
-        let lineChartDataSet = LineChartDataSet(values: dataEntries, label: "Units Sold")
+        let lineChartDataSet = LineChartDataSet(values: dataEntries, label: "iBeacon")
         let lineChartData = LineChartData(dataSet: lineChartDataSet)
         lineChartView.data = lineChartData
         
@@ -93,9 +98,7 @@ class BeaconChartsViewController: UIViewController, ESTBeaconManagerDelegate {
         self.beaconManager.delegate = self
         // Do any additional setup after loading the view.
         self.beaconManager.requestAlwaysAuthorization()
-        
         //setChart(dataPoints: months, values: Rssivalue[]  )
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -113,5 +116,5 @@ class BeaconChartsViewController: UIViewController, ESTBeaconManagerDelegate {
         super.viewDidDisappear(animated)
         self.beaconManager.stopRangingBeacons(in: self.beaconRegion)
     }
-
+    
 }
