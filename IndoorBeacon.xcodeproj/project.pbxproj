@@ -20,6 +20,7 @@
 		1C441BBC1E1DF07700C1FBED /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C441BBB1E1DF07700C1FBED /* EstimoteSDK.framework */; };
 		1C44381C1E4D5AD9001BDE21 /* BeaconStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C44381B1E4D5AD9001BDE21 /* BeaconStatisticsViewController.swift */; };
 		1C63D94C1E5C6F2500BEB438 /* BeaconMutiDetectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C63D94B1E5C6F2500BEB438 /* BeaconMutiDetectorViewController.swift */; };
+		1C7676B01E6DA5B20046876D /* TwoLayerDetectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7676AF1E6DA5B20046876D /* TwoLayerDetectViewController.swift */; };
 		1C9755521E66C0C50079081F /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C97554D1E66C0610079081F /* Charts.framework */; };
 		1C9755531E66C0C50079081F /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C97554D1E66C0610079081F /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -86,6 +87,7 @@
 		1C441BBB1E1DF07700C1FBED /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
 		1C44381B1E4D5AD9001BDE21 /* BeaconStatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconStatisticsViewController.swift; sourceTree = "<group>"; };
 		1C63D94B1E5C6F2500BEB438 /* BeaconMutiDetectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconMutiDetectorViewController.swift; sourceTree = "<group>"; };
+		1C7676AF1E6DA5B20046876D /* TwoLayerDetectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoLayerDetectViewController.swift; sourceTree = "<group>"; };
 		1C9755461E66C0610079081F /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +133,7 @@
 				1C63D94B1E5C6F2500BEB438 /* BeaconMutiDetectorViewController.swift */,
 				1C067A541E5E8CFA00AFA660 /* PositionDetectViewController.swift */,
 				1C04CA2D1E66AA1400F5E8BF /* BeaconChartsViewController.swift */,
+				1C7676AF1E6DA5B20046876D /* TwoLayerDetectViewController.swift */,
 				1C441B9D1E1DD8CF00C1FBED /* Main.storyboard */,
 				1C441BA01E1DD8CF00C1FBED /* Assets.xcassets */,
 				1C441BA21E1DD8CF00C1FBED /* LaunchScreen.storyboard */,
@@ -272,6 +275,7 @@
 				1C067A551E5E8CFA00AFA660 /* PositionDetectViewController.swift in Sources */,
 				1C44381C1E4D5AD9001BDE21 /* BeaconStatisticsViewController.swift in Sources */,
 				1C04CA2E1E66AA1400F5E8BF /* BeaconChartsViewController.swift in Sources */,
+				1C7676B01E6DA5B20046876D /* TwoLayerDetectViewController.swift in Sources */,
 				1C326F461E2CADE200DD162F /* BeaconListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
