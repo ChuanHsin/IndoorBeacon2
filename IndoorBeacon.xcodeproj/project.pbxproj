@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C04CA2E1E66AA1400F5E8BF /* BeaconChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C04CA2D1E66AA1400F5E8BF /* BeaconChartsViewController.swift */; };
+		1C04EE861E6FA80A00F18EB3 /* ExpTwoBeaconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C04EE851E6FA80A00F18EB3 /* ExpTwoBeaconViewController.swift */; };
 		1C067A551E5E8CFA00AFA660 /* PositionDetectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C067A541E5E8CFA00AFA660 /* PositionDetectViewController.swift */; };
 		1C326F441E2CA5FB00DD162F /* BeaconListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C326F431E2CA5FB00DD162F /* BeaconListViewController.swift */; };
 		1C326F461E2CADE200DD162F /* BeaconListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C326F451E2CADE200DD162F /* BeaconListCell.swift */; };
@@ -72,6 +73,7 @@
 
 /* Begin PBXFileReference section */
 		1C04CA2D1E66AA1400F5E8BF /* BeaconChartsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconChartsViewController.swift; sourceTree = "<group>"; };
+		1C04EE851E6FA80A00F18EB3 /* ExpTwoBeaconViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpTwoBeaconViewController.swift; sourceTree = "<group>"; };
 		1C067A541E5E8CFA00AFA660 /* PositionDetectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionDetectViewController.swift; sourceTree = "<group>"; };
 		1C326F431E2CA5FB00DD162F /* BeaconListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconListViewController.swift; sourceTree = "<group>"; };
 		1C326F451E2CADE200DD162F /* BeaconListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconListCell.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				1C067A541E5E8CFA00AFA660 /* PositionDetectViewController.swift */,
 				1C04CA2D1E66AA1400F5E8BF /* BeaconChartsViewController.swift */,
 				1C7676AF1E6DA5B20046876D /* TwoLayerDetectViewController.swift */,
+				1C04EE851E6FA80A00F18EB3 /* ExpTwoBeaconViewController.swift */,
 				1C441B9D1E1DD8CF00C1FBED /* Main.storyboard */,
 				1C441BA01E1DD8CF00C1FBED /* Assets.xcassets */,
 				1C441BA21E1DD8CF00C1FBED /* LaunchScreen.storyboard */,
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C04EE861E6FA80A00F18EB3 /* ExpTwoBeaconViewController.swift in Sources */,
 				1C441B9C1E1DD8CF00C1FBED /* ViewController.swift in Sources */,
 				1C63D94C1E5C6F2500BEB438 /* BeaconMutiDetectorViewController.swift in Sources */,
 				1C441B9A1E1DD8CF00C1FBED /* AppDelegate.swift in Sources */,

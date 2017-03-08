@@ -35,9 +35,8 @@ class TwoLayerDetectViewController: UIViewController, ESTBeaconManagerDelegate {
     }
     
     func beaconManager(_ manager: Any, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
-        // _ = beacons.filter(){ $0.accuracy > 0.0 }
-        // ($0.accuracy > 0.0)&&(1.5 > $0.accuracy)抓取0~1.5的值
-        let sortedBeacons = beacons.filter{ ($0.accuracy > 0.0)&&( 1.5 > $0.accuracy) }.sorted(){ $0.accuracy < $1.accuracy }
+        //條件beacon power:-30db, ~1.5m
+        let sortedBeacons = beacons.filter{ ($0.accuracy > 0.0)&&( 6 > $0.accuracy) }.sorted(){ $0.accuracy < $1.accuracy }
         
         print(sortedBeacons.count)
         /*
@@ -133,9 +132,21 @@ class TwoLayerDetectViewController: UIViewController, ESTBeaconManagerDelegate {
         
         let lineChartDataSetyValue1 = LineChartDataSet(values: yVals1, label: "iBeacon1")
         let lineChartDataSetyValue2 = LineChartDataSet(values: yVals2, label: "iBeacon2")
+        lineChartDataSetyValue1.highlightColor = UIColor.blue
+        lineChartDataSetyValue2.highlightColor = UIColor.green
+        //set1.setCircleColor(UIColor.red)
+        
+        //設定函數名稱顏色和連接線顏色ㄝsetColor
+        lineChartDataSetyValue1.setColor(UIColor.blue)
+        lineChartDataSetyValue2.setColor(UIColor.green)
+        
+        //設定函數線圈外匡顏色
         lineChartDataSetyValue1.setCircleColor(UIColor.blue)
         lineChartDataSetyValue2.setCircleColor(UIColor.green)
-        //set1.setCircleColor(UIColor.red)
+        
+        //設定函數數值顏色valueTextColor
+        lineChartDataSetyValue1.valueTextColor = UIColor.blue
+        lineChartDataSetyValue2.valueTextColor = UIColor.green
         
         var dataSets = [IChartDataSet]()
         dataSets.append(lineChartDataSetyValue1)
