@@ -100,6 +100,8 @@ class TwoLayerDetectViewController: UIViewController, ESTBeaconManagerDelegate {
                 Rssivalue += [ConvertToDouble]
                 print(Rssivalue)
                
+                //Savevalue(values1: [count], values2: Rssivalue)
+                
                 //2nd Beacon RSSI
                 ConvertToDouble2 = Double(SecondBeacon.rssi) + 0.0
                 Rssivalue2 += [ConvertToDouble2]
@@ -113,9 +115,18 @@ class TwoLayerDetectViewController: UIViewController, ESTBeaconManagerDelegate {
             }
         }
     }
-    
+    /*
+    func Savevalue(values1: [Double], values2: [Double]){
+        
+        for i in 0..<values1.count {
+            
+            let data = ChartDataEntry(x: Double(i), y: values2[i] )
+            print(data)
+            
+        }
+        
+    }*/
 
-    
     //加入圖表
     func setChart(dataPoints: [String], values: [Double], values2:[Double]) {
         

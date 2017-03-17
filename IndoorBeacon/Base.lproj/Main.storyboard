@@ -476,6 +476,7 @@
                         <segue destination="hTO-lD-l6O" kind="relationship" relationship="viewControllers" id="ZQX-Jg-hIH"/>
                         <segue destination="rGQ-FS-ZBh" kind="relationship" relationship="viewControllers" id="3ec-h1-lyW"/>
                         <segue destination="0M1-On-HB6" kind="relationship" relationship="viewControllers" id="M4o-pZ-xdX"/>
+                        <segue destination="5as-3N-0Vr" kind="relationship" relationship="viewControllers" id="41M-hf-bL8"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jUi-oT-c6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -615,7 +616,7 @@
             </objects>
             <point key="canvasLocation" x="4746" y="629"/>
         </scene>
-        <!--Exp Two Beacon View Controller-->
+        <!--Exp Two Beaocn-->
         <scene sceneID="pR1-za-W1E">
             <objects>
                 <viewController id="zd9-RL-jFV" customClass="ExpTwoBeaconViewController" customModule="IndoorBeacon" customModuleProvider="target" sceneMemberID="viewController">
@@ -648,7 +649,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.792156862745098" green="0.94509803921568625" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="I86-LK-nos"/>
+                    <navigationItem key="navigationItem" title="Exp Two Beaocn" id="I86-LK-nos"/>
                     <connections>
                         <outlet property="FirstBeaconLabel" destination="AxD-CH-Xf8" id="QYc-1p-jVf"/>
                         <outlet property="Principle" destination="j7j-if-gmq" id="cwA-c1-h16"/>
@@ -658,6 +659,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OW8-5S-rWR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5573.6000000000004" y="1360.569715142429"/>
+        </scene>
+        <!--Exp One Beacon-->
+        <scene sceneID="6lU-LS-Rol">
+            <objects>
+                <viewController id="f96-zF-B6M" customClass="ExpOneBeaconViewController" customModule="IndoorBeacon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L8S-1d-bml"/>
+                        <viewControllerLayoutGuide type="bottom" id="yxj-hZ-aER"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S6E-vh-Zln">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1. Beacon:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8h-jm-NQr">
+                                <rect key="frame" x="16" y="72" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GFk-rf-x4Q">
+                                <rect key="frame" x="112" y="139" width="150" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.86628247798119018" green="0.88395950877815399" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.792156862745098" green="0.94509803921568625" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Exp One Beacon" id="w6O-ur-yyq"/>
+                    <connections>
+                        <outlet property="FirstBeaconLabel" destination="D8h-jm-NQr" id="KDx-aH-Sgi"/>
+                        <outlet property="Principle" destination="GFk-rf-x4Q" id="ogO-gq-Mis"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D34-ds-CXv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6477.6000000000004" y="1360.569715142429"/>
         </scene>
         <!--Exp.TwoBeacon-->
         <scene sceneID="5lY-Aa-lLR">
@@ -677,6 +715,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YUm-B6-HRJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5575" y="627"/>
+        </scene>
+        <!--Exp. OneBeacon-->
+        <scene sceneID="yfk-Cb-lh2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5as-3N-0Vr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Exp. OneBeacon" image="list_icon" id="8lM-2h-86m"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nMH-iC-xpr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="f96-zF-B6M" kind="relationship" relationship="rootViewController" id="R2r-UR-oAd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dl9-kf-HOP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6478" y="627"/>
         </scene>
     </scenes>
     <resources>
