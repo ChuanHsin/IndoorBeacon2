@@ -29,6 +29,8 @@ class ExpOneBeaconViewController: UIViewController, ESTBeaconManagerDelegate {
             
             count = count + 1
             print("BeaconCount:\(sortedBeacons.count)","TotalCount:",count)
+            
+            //加入時間
             let date = Date()
             let calendar = Calendar.current
             
@@ -47,10 +49,10 @@ class ExpOneBeaconViewController: UIViewController, ESTBeaconManagerDelegate {
                 
             }else if (sortedBeacons.count == 1){ //detect one beacon
                 
-                //let FirstBeacon = sortedBeacons[0]c as CLBeacon
+                //let FirstBeacon = sortedBeacons[0] as CLBeacon
                 if let FirstBeacon = sortedBeacons.first{
                 
-                if (FirstBeacon.major == 44057){
+                if (FirstBeacon.major == 58791){
                     
                     print("1stBeacon=\(FirstBeacon.major)", "RSSI=", FirstBeacon.rssi)
                     FirstBeaconLabel.text = "1st.Beacon : \(FirstBeacon.major)"
@@ -58,6 +60,18 @@ class ExpOneBeaconViewController: UIViewController, ESTBeaconManagerDelegate {
                     Principle.image = #imageLiteral(resourceName: "lemonYellow")
                     
                 }
+ 
+                /*
+                     if (FirstBeacon.major == 44057){
+                     
+                     print("1stBeacon=\(FirstBeacon.major)", "RSSI=", FirstBeacon.rssi)
+                     FirstBeaconLabel.text = "1st.Beacon : \(FirstBeacon.major)"
+                     
+                     Principle.image = #imageLiteral(resourceName: "beetrootRed")
+                     
+                     }
+                */
+                
                 }
             }else if (sortedBeacons.count != 1 ){ //若 不為一顆Beacon 偵測錯誤率
                 error = error + 1

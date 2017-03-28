@@ -15,6 +15,10 @@ class ExpTwoBeaconViewController: UIViewController, ESTBeaconManagerDelegate {
     @IBOutlet weak var Principle: UIImageView!
     
     var count: Int = 0
+    var error_A: Int = 0
+    var error_B: Int = 0
+    var error_C: Int = 0
+    var error_D: Int = 0
     
     let beaconManager = ESTBeaconManager()
     let beaconRegion = CLBeaconRegion(proximityUUID: UUID(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "estimote")
@@ -24,60 +28,83 @@ class ExpTwoBeaconViewController: UIViewController, ESTBeaconManagerDelegate {
     }
     
     func beaconManager(_ manager: Any, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
-        //條件beacon power:-30db, ~1.5m
-        let sortedBeacons = beacons.filter{ $0.accuracy > 0.0 }.sorted(){ $0.accuracy < $1.accuracy }
+        //條件beacon power:-30db, ~1.5m rssi= 91 設為閥值  && ($0.rssi > -92)
+        let sortedBeacons = beacons.filter{ ($0.accuracy > 0.0) }.sorted(){ $0.accuracy < $1.accuracy }
         
         count = count + 1
         print("BeaconCount:\(sortedBeacons.count)","TotalCount:",count)
        
-         if (sortedBeacons.count == 0){ // detect No beacon
+        //加入時間
+        let date = Date()
+        let calendar = Calendar.current
+        
+        let hour = calendar.component(.hour, from: date)
+        let minutes = calendar.component(.minute, from: date)
+        let seconds = calendar.component(.second, from: date)
+        print("hours = \(hour):\(minutes):\(seconds)")
+        
+        
+        if (sortedBeacons.count == 0){ // detect No beacon
          
-         Principle.image = #imageLiteral(resourceName: "A∩B Original")
-         FirstBeaconLabel.text = "1st.Beacon : "
-         SecondBeaconLabel.text = "2nd.Beacon : "
+            Principle.image = #imageLiteral(resourceName: "A∩B Original")
+            FirstBeaconLabel.text = "1st.Beacon : "
+            SecondBeaconLabel.text = "2nd.Beacon : "
+            //error_A 任一顆beacon都沒讀到
+            error_A = error_A + 1
+            print("CountA for Error", error_A)
+            
+        }else if (sortedBeacons.count == 1){ //detect one beacon
          
-         }else if (sortedBeacons.count == 1){ //detect one beacon
+            let FirstBeacon = sortedBeacons[0] as CLBeacon
          
-         let FirstBeacon = sortedBeacons[0] as CLBeacon
+            if (FirstBeacon.major == 58791){
          
-         if (FirstBeacon.major == 58791){
+                print("1stBeacon=\(FirstBeacon.major)", "RSSI=", FirstBeacon.rssi)
+                FirstBeaconLabel.text = "1st.Beacon : \(FirstBeacon.major)"
+                SecondBeaconLabel.text = "2nd.Beacon : "
          
-         print("1stBeacon=\(FirstBeacon.major)", "RSSI=", FirstBeacon.rssi)
-         FirstBeaconLabel.text = "1st.Beacon : \(FirstBeacon.major)"
-         SecondBeaconLabel.text = "2nd.Beacon : "
+                Principle.image = #imageLiteral(resourceName: "A-1")
+                
+                //error_B 只讀到beacon 58791
+                error_B = error_B + 1
+                print("CountB for Error", error_B)
          
-         Principle.image = #imageLiteral(resourceName: "A-1")
+            }else if (FirstBeacon.major == 44057){
          
-         }else if (FirstBeacon.major == 44057){
+                print("1stBeacon=\(FirstBeacon.major)", "RSSI=", FirstBeacon.rssi)
+                FirstBeaconLabel.text = "1st.Beacon : \(FirstBeacon.major)"
+                SecondBeaconLabel.text = "2nd.Beacon : "
          
-         print("1stBeacon=\(FirstBeacon.major)", "RSSI=", FirstBeacon.rssi)
-         FirstBeaconLabel.text = "1st.Beacon : \(FirstBeacon.major)"
-         SecondBeaconLabel.text = "2nd.Beacon : "
-         
-         Principle.image = #imageLiteral(resourceName: "B-1")
-         
-         }
+                Principle.image = #imageLiteral(resourceName: "B-1")
+                
+                //error_C 只讀到beacon 44057
+                error_C = error_C + 1
+                print("CountC for Error", error_C)
+            }
          
          }else if(sortedBeacons.count == 2){ //detect two beacon
             
             let FirstBeacon = sortedBeacons[0] as CLBeacon
             let SecondBeacon = sortedBeacons[1] as CLBeacon
             
-            print("1stBeacon=\(FirstBeacon.major)", "RSSI=", FirstBeacon.rssi)
-            print("2ndBeacon=\(SecondBeacon.major)", "RSSI=", SecondBeacon.rssi)
-            
-            FirstBeaconLabel.text = "1st.Beacon : \(FirstBeacon.major)"
-            SecondBeaconLabel.text = "2nd.Beacon : \(SecondBeacon.major)"
-            
             //顯示距離遠到近的iBeacon
             if (FirstBeacon.major == 58791 && SecondBeacon.major == 44057)||(FirstBeacon.major == 44057 && SecondBeacon.major == 58791){ //判斷為兩顆iBeacon
                 
-                Principle.image = #imageLiteral(resourceName: "A∩B-1")
+                print("1stBeacon=\(FirstBeacon.major)", "RSSI=", FirstBeacon.rssi)
+                print("2ndBeacon=\(SecondBeacon.major)", "RSSI=", SecondBeacon.rssi)
                 
+                FirstBeaconLabel.text = "1st.Beacon : \(FirstBeacon.major)"
+                SecondBeaconLabel.text = "2nd.Beacon : \(SecondBeacon.major)"
+                
+                Principle.image = #imageLiteral(resourceName: "A∩B-1")
             }
+            
+        }else if (sortedBeacons.count != 0 && sortedBeacons.count != 1 && sortedBeacons.count != 2 ){ //若 不為一顆Beacon 偵測錯誤
+            //若Count讀到的不是0 1 2
+            error_D = error_D + 1
+            print("CountD for Error", error_D)
         }
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
