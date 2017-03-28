@@ -23,6 +23,7 @@
 		1C63D94C1E5C6F2500BEB438 /* BeaconMutiDetectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C63D94B1E5C6F2500BEB438 /* BeaconMutiDetectorViewController.swift */; };
 		1C72A9FB1E7800940033A34C /* ExpOneBeaconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C72A9FA1E7800940033A34C /* ExpOneBeaconViewController.swift */; };
 		1C7676B01E6DA5B20046876D /* TwoLayerDetectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7676AF1E6DA5B20046876D /* TwoLayerDetectViewController.swift */; };
+		1C878CF71E8A4569000E3F5B /* IoTHomeSecurityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C878CF61E8A4569000E3F5B /* IoTHomeSecurityViewController.swift */; };
 		1C9755521E66C0C50079081F /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C97554D1E66C0610079081F /* Charts.framework */; };
 		1C9755531E66C0C50079081F /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C97554D1E66C0610079081F /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -92,6 +93,7 @@
 		1C63D94B1E5C6F2500BEB438 /* BeaconMutiDetectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconMutiDetectorViewController.swift; sourceTree = "<group>"; };
 		1C72A9FA1E7800940033A34C /* ExpOneBeaconViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpOneBeaconViewController.swift; sourceTree = "<group>"; };
 		1C7676AF1E6DA5B20046876D /* TwoLayerDetectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoLayerDetectViewController.swift; sourceTree = "<group>"; };
+		1C878CF61E8A4569000E3F5B /* IoTHomeSecurityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IoTHomeSecurityViewController.swift; sourceTree = "<group>"; };
 		1C9755461E66C0610079081F /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +142,7 @@
 				1C7676AF1E6DA5B20046876D /* TwoLayerDetectViewController.swift */,
 				1C72A9FA1E7800940033A34C /* ExpOneBeaconViewController.swift */,
 				1C04EE851E6FA80A00F18EB3 /* ExpTwoBeaconViewController.swift */,
+				1C878CF61E8A4569000E3F5B /* IoTHomeSecurityViewController.swift */,
 				1C441B9D1E1DD8CF00C1FBED /* Main.storyboard */,
 				1C441BA01E1DD8CF00C1FBED /* Assets.xcassets */,
 				1C441BA21E1DD8CF00C1FBED /* LaunchScreen.storyboard */,
@@ -280,6 +283,7 @@
 				1C72A9FB1E7800940033A34C /* ExpOneBeaconViewController.swift in Sources */,
 				1C441B9A1E1DD8CF00C1FBED /* AppDelegate.swift in Sources */,
 				1C326F441E2CA5FB00DD162F /* BeaconListViewController.swift in Sources */,
+				1C878CF71E8A4569000E3F5B /* IoTHomeSecurityViewController.swift in Sources */,
 				1C067A551E5E8CFA00AFA660 /* PositionDetectViewController.swift in Sources */,
 				1C44381C1E4D5AD9001BDE21 /* BeaconStatisticsViewController.swift in Sources */,
 				1C04CA2E1E66AA1400F5E8BF /* BeaconChartsViewController.swift in Sources */,
